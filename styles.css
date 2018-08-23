@@ -55,3 +55,10 @@
 #empty{
   order: 9;
 }
+
+button{
+  width: 200px;
+  height: 60px;
+  background-color: red;
+  color: white;
+}
