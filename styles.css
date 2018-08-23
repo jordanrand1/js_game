@@ -1,0 +1,57 @@
+.grid{
+  display: flex;
+  width:606px;
+  height: 606px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#box1{
+  order: 1;
+  background-image: url(images/box1.jpg);
+}
+
+#box2{
+  order: 2;
+  background-image: url(images/box2.jpg);
+}
+
+#box3{
+  order: 3;
+  background-image: url(images/box3.jpg);
+}
+
+#box4{
+  order: 4;
+  background-image: url(images/box4.jpg);
+}
+
+#box5{
+  order: 5;
+  background-image: url(images/box5.jpg);
+}
+
+#box6{
+  order: 6;
+  background-image: url(images/box6.jpg);
+}
+
+#box7{
+  order: 7;
+  background-image: url(images/box7.jpg);
+}
+
+#box8{
+  order: 8;
+  background-image: url(images/box8.jpg);
+}
+
+#empty{
+  order: 9;
+}
