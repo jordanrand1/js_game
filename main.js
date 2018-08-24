@@ -3,6 +3,7 @@
 var boxes = $('.box')
 var $empty = $('#empty')
 var $shuffle = $('#shuffle')
+var $original = []
 
 // Functions
 
@@ -10,6 +11,7 @@ function move(e){
   var emptyOrder = $($empty).css('order')
   console.log($(e.target).css('order'))
   isNearEmpty(e.target, emptyOrder)
+  checkWin()
 }
 
 function isNearEmpty(clickedOn, emptyOrder){
@@ -34,13 +36,24 @@ function shuffle(e){
     item = numbers[randomIndex]
     numbers.splice(randomIndex, 1)
     $(boxes[i]).css('order', item)
-    $($empty).css
+    $(boxes[i]).html($original[i])
   }
+}
+
+function checkWin(){
+  currentPos = []
+  for (i = 0; i < boxes.length; i++){
+    currentPos += $(boxes[i]).css('order')
+  }
+  if ($original === currentPos){
+    $('.grid').html('You WIN!')
+  } 
 }
 
 // Listeners
 
 for (i = 0; i < boxes.length; i++){
+  $original += $(boxes[i]).css('order')
   $(boxes[i]).on('click', move)
 }
 
